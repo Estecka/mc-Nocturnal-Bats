@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "nocturnal-bats",
+	"version": "${version}",
+	"name": "Nocturnal Bats",
+	"description": "Lets bats come out at night",
+	"authors": [
+		"Estecka"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/nocturnal-bats",
+		"sources": "https://github.com/Estecka/mc-Nocturnal-Bats"
+	},
+	"license": "MIT",
+	"icon": "assets/nocturnal-bats/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+		]
+	},
+	"mixins": [
+		"nocturnal-bats.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"java": ">=17"
+	},
+	"recommends": {
+		"minecraft": "^1.19.4"
+	}
+}
