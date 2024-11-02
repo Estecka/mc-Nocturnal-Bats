@@ -9,7 +9,8 @@
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/nocturnal-bats",
-		"sources": "https://github.com/Estecka/mc-Nocturnal-Bats"
+		"sources": "https://github.com/Estecka/mc-Nocturnal-Bats",
+		"issues":  "https://github.com/Estecka/mc-Nocturnal-Bats/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/nocturnal-bats/icon.png",
@@ -22,6 +23,7 @@
 		"nocturnal-bats.mixins.json"
 	],
 	"depends": {
+		"minecraft": "<1.21.2",
 		"fabricloader": ">=0.15.6",
 		"java": ">=17"
 	},
