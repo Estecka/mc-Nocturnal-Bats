@@ -3,6 +3,6 @@
 Initial Release
 
 ## 1.21.2
-### Worked around
-- Bat now spawn below the highest block, instead of below sea-level: Redirect the spawn pos instead of the threshold.
+### Worked around:
+- Bats now spawn below the highest block, instead of below sea-level: Redirect the spawn position instead of the threshold.
 - Bats can only spawn on specific blocks. Data is backward compatible.

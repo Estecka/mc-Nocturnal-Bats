@@ -2,8 +2,8 @@ package tk.estecka.nocturnalbats.mixin;
 
 import net.minecraft.entity.passive.BatEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.WorldAccess;
 // import net.minecraft.world.LightType;
+import net.minecraft.world.WorldAccess;
 // import org.slf4j.Logger;
 // import org.slf4j.LoggerFactory;
 import org.spongepowered.asm.mixin.Mixin;
