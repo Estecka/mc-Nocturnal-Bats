@@ -15,15 +15,16 @@ public class BatEntityMixin
 {
 	// private static final Logger LOGGER = LoggerFactory.getLogger("nocturnal-bats");
 
-	@Redirect( method="canSpawn", at=@At(value="INVOKE", target="net/minecraft/world/WorldAccess.getSeaLevel ()I") )
-	static private int	SpawnAtAllAltitudes(WorldAccess world) {
-		return world.getTopY();
+	@Redirect( method="canSpawn", at=@At(value="INVOKE", ordinal=0, target="net/minecraft/util/math/BlockPos.getY()I") )
+	static private int	SpawnAtAllAltitudes(BlockPos spawnPos) {
+		return Integer.MIN_VALUE;
 	}
 
 	/**
-	 * @implNote Bats need a light level  of less than 4  in order to spawn. The
-	 * default  ambient darkness  at dusk  and dawn  is 6. Here  it is  linearly
-	 * remapped to 12, the minimum required to allow bat spawns at those times.
+	 * @implNote Bats need a light level lesser than 4 to spawn, this requires
+	 * an ambient darkness of at least 12. At dusk and dawn, the darkness is 6
+	 * in vanilla. Only skylight is affected  by ambient darkness. Block light
+	 * levels are unaffected.
 	 */
 	@Redirect( method="canSpawn", at=@At(value="INVOKE", target="net/minecraft/world/WorldAccess.getLightLevel (Lnet/minecraft/util/math/BlockPos;)I") )
 	static private int	FearNotSkylight(WorldAccess world, BlockPos pos) {
