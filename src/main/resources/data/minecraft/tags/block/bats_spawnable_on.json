@@ -1,7 +1,10 @@
 {
 	"values": [
 		"#dirt",
+		"#grass_blocks",
 		"#leaves",
+		"#mud",
+		"#moss_blocks",
 		"#sand",
 		"#snow"
 	]
